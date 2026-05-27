@@ -1,7 +1,8 @@
 {
-  "dialect": "postgresql",
-  "schema": "./src/db/schema.ts",
+  "schema": "./db/schema.ts",
+  "out": "./drizzle",
+  "driver": "pg",
   "dbCredentials": {
-    "url": "postgresql://postgres:postgres@127.0.0.1:5432/app_db"
+    "connectionString": process.env.DATABASE_URL
   }
 }
